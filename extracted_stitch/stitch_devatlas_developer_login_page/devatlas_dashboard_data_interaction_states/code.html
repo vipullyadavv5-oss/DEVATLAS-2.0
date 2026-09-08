@@ -1,0 +1,1201 @@
+<!DOCTYPE html><html class="" lang="en" style="opacity: 0;" data-stitch-anim-opacity="true"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#34343a", "primary-fixed-dim": "#adc6ff", "primary-container": "#4d8eff", "secondary-container": "#00a572", "tertiary-fixed-dim": "#ffb786", "background": "#121318", "on-tertiary-fixed-variant": "#723600", "on-primary-fixed": "#001a42", "primary": "#adc6ff", "on-secondary-container": "#00311f", "error-container": "#93000a", "surface-tint": "#adc6ff", "outline": "#8c909f", "on-primary-fixed-variant": "#004395", "surface-container-highest": "#34343a", "primary-fixed": "#d8e2ff", "surface-container": "#1e1f25", "on-tertiary-fixed": "#311400", "tertiary-container": "#df7412", "surface-dim": "#121318", "on-primary": "#002e6a", "on-secondary-fixed-variant": "#005236", "tertiary": "#ffb786", "surface": "#121318", "surface-bright": "#38393f", "on-secondary-fixed": "#002113", "on-error": "#690005", "secondary-fixed-dim": "#4edea3", "on-tertiary-container": "#461f00", "on-tertiary": "#502400", "tertiary-fixed": "#ffdcc6", "on-secondary": "#003824", "on-surface": "#e3e1e9", "on-background": "#e3e1e9", "inverse-on-surface": "#2f3036", "on-surface-variant": "#c2c6d6", "inverse-surface": "#e3e1e9", "on-primary-container": "#00285d", "surface-container-low": "#1a1b21", "surface-container-lowest": "#0d0e13", "outline-variant": "#424754", "surface-container-high": "#292a2f", "error": "#ffb4ab", "secondary-fixed": "#6ffbbe", "inverse-primary": "#005ac2", "secondary": "#4edea3", "on-error-container": "#ffdad6" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "sidebar-width": "15rem", "space-2xl": "2rem", "space-3xl": "3rem", "space-xl": "1.5rem", "space-md": "0.75rem", "gutter-mobile": "1rem", "space-2xs": "0.125rem", "space-lg": "1rem", "inspector-width": "20rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "label-md": ["Inter"], "code-sm": ["JetBrains Mono"], "body-md": ["Inter"], "display": ["Inter"], "body-lg": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-sm": ["Inter"], "code-md": ["JetBrains Mono"], "headline-lg": ["Inter"], "headline-lg-mobile": ["Inter"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "code-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "body-lg": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }], "code-md": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "headline-lg-mobile": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script></head><body class="font-body-md text-body-md text-on-surface antialiased min-h-screen bg-slate-50"><header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200"><div class="max-w-7xl mx-auto px-gutter-desktop h-14 flex items-center justify-between"><div class="flex items-center gap-space-xl"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center w-8 h-8 rounded bg-slate-100 border border-slate-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 absolute top-1.5 right-1.5"></span><span class="material-symbols-outlined text-slate-900 text-[18px]">layers</span></div><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-slate-900 tracking-tight">DevAtlas</span><span class="px-1.5 py-0.5 rounded bg-slate-100 border border-slate-200 font-code-sm text-code-sm text-slate-600">v1.0</span></div></div><nav class="flex items-center gap-space-md"><a aria-current="page" class="font-label-md transition-colors text-slate-900 bg-slate-100 rounded px-space-sm py-1 border border-slate-200" data-path="dashboard" href="#">Dashboard</a><a class="font-label-md text-label-md text-slate-500 hover:text-slate-900 hover:bg-slate-100 transition-colors px-space-sm py-1 rounded" data-path="settings" href="#">Settings</a></nav></div><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors font-label-sm text-label-sm shadow-2xs" data-path="public-profile" href="#"><span class="">View Public Profile</span><span class="material-symbols-outlined text-[14px]">open_in_new</span></a><div class="flex items-center gap-space-sm pl-space-sm border-l border-slate-200"><div class="flex items-center gap-space-xs"><div class="relative flex items-center"><div class="w-8 h-8 rounded-full bg-slate-900 flex items-center justify-center"><span class="material-symbols-outlined text-white text-[18px]">person</span></div><span class="w-2 h-2 rounded-full bg-emerald-500 absolute bottom-0 right-0 ring-2 ring-white"></span></div><span class="font-code-sm text-code-sm text-slate-700 hidden sm:inline">@alexdev</span></div></div></div></div></header><main class="w-full pt-14 max-w-7xl mx-auto px-gutter-desktop min-h-[calc(100vh-3.5rem)] bg-slate-50"><div class="flex flex-col w-full text-slate-800 pb-24 font-sans">
+<style>
+    .devatlas-grid-bg {
+      background-color: #f8fafc;
+      background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
+      background-size: 16px 16px;
+    }
+    .devatlas-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+    }
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .sync-spin {
+      animation: spinSlow 0.9s linear infinite;
+    }
+    .skeleton-shimmer {
+      position: relative;
+      overflow: hidden;
+      background-color: #f1f5f9;
+    }
+    .skeleton-shimmer::after {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      transform: translateX(-100%);
+      background-image: linear-gradient(90deg, rgba(255,255,255, 0) 0, rgba(255,255,255, 0.6) 50%, rgba(255,255,255, 0) 100%);
+      animation: shimmer 1.5s infinite;
+      content: '';
+    }
+    @keyframes shimmer {
+      100% { transform: translateX(100%); }
+    }
+</style>
+<div class="devatlas-grid-bg rounded-lg p-4 sm:p-6 md:p-8 flex flex-col gap-6 text-slate-900 border border-slate-200 mt-2">
+<!-- 1. PAGE HEADER -->
+<section class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pb-3 border-b border-slate-200/80">
+<div class="space-y-1">
+<div class="flex items-center gap-2.5 flex-wrap">
+<h1 class="text-[24px] leading-8 font-bold text-slate-900 tracking-tight">Developer Overview</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-300" id="accountTypeBadge">FRESH ACCOUNT</span>
+<span class="hidden" id="stateNotificationTag"></span>
+</div>
+<p class="text-[13px] leading-5 text-slate-500 font-normal">
+        Your verified coding activity across GitHub, LeetCode, and Codeforces.
+      </p>
+</div>
+<!-- Header Action Bar & Cache status -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 self-start md:self-auto">
+<div class="flex flex-col text-left sm:text-right">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-100 border border-slate-200 font-mono text-[11px] text-slate-600" id="statusBadge">
+<span class="w-2 h-2 rounded-full bg-slate-400" id="syncStatusDot"></span>
+<span class="font-medium" id="syncStatusText">Not synced yet</span>
+</div>
+<span class="text-[11px] text-slate-400 mt-0.5">Refreshes automatically every 24h</span>
+</div>
+<button aria-label="Refresh Telemetry Data" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-white hover:bg-slate-50 active:bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-300 text-[12px] font-medium transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400" id="btnRefreshHeader" onclick="triggerInteractiveRefresh()">
+<span class="material-symbols-outlined text-[15px] transition-transform" id="refreshIcon">sync</span>
+<span id="btnRefreshLabel" class="">Refresh Data</span>
+</button>
+</div>
+</section>
+<!-- NOTIFICATION BANNER (For Alerts & Errors) -->
+<div class="hidden" id="dashboardNotification"></div>
+<!-- 2. PRIMARY METRICS ROW (2 Columns) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left Col: DEVSCORE CARD [7 cols] -->
+<div class="lg:col-span-7 devatlas-card rounded-lg p-5 flex flex-col justify-between relative overflow-hidden">
+<div>
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<span class="text-[15px] font-semibold text-slate-900 tracking-tight">DevScore</span>
+<div aria-label="Score calculation info" class="group relative cursor-help flex items-center text-slate-400 hover:text-slate-600" tabindex="0">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 hidden group-hover:flex group-focus:flex px-2 py-1 bg-slate-800 text-slate-50 text-[11px] rounded shadow-lg whitespace-nowrap z-30 font-sans font-normal">Calculated deterministically from algorithmic correctness and commit velocity</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono text-slate-500 bg-slate-50 border border-slate-200" id="devScoreBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400" id="scoreBadgeDot"></span>
+<span id="scoreBadgeText" class="">Waiting for data</span>
+</span>
+</div>
+<!-- Gauge + Descriptive text -->
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 py-2" id="devScoreContent">
+<!-- Circular Gauge -->
+<div class="relative w-36 h-36 flex-shrink-0 flex items-center justify-center" id="gaugeWrapper">
+<svg aria-label="DevScore Progress Gauge" class="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
+<circle cx="60" cy="60" fill="transparent" r="50" stroke="#e2e8f0" stroke-dasharray="314.16" stroke-dashoffset="0" stroke-linecap="round" stroke-width="8"></circle>
+<circle class="transition-all duration-700 ease-out" cx="60" cy="60" fill="transparent" id="scoreRingActive" r="50" stroke="#3b82f6" stroke-dasharray="314.16" stroke-dashoffset="314.16" stroke-linecap="round" stroke-width="8" style="stroke-dashoffset: 314.16; stroke: rgb(148, 163, 184);"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="text-[44px] font-bold text-slate-900 tracking-tight leading-none" id="scoreValueText">0</span>
+<span class="text-[12px] font-medium text-slate-400 mt-0.5 font-mono">/ 100</span>
+</div>
+</div>
+<!-- Gauge context details -->
+<div class="flex flex-col justify-center space-y-3 w-full text-center sm:text-left" id="scoreDetailsBlock">
+<div class="space-y-1">
+<h4 class="text-[14px] font-semibold text-slate-800" id="scoreTitle">Waiting for verified coding activity</h4>
+<p class="text-[12px] text-slate-500 leading-relaxed max-w-sm" id="scoreDescription">Your score will appear after your coding data is synced from integrated developer platforms.</p>
+</div>
+<!-- Metric Breakdown Row with 0% state -->
+<div class="space-y-2 pt-1" id="scoreBreakdownContainer">
+<!-- GitHub item -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-medium text-slate-600">GitHub Telemetry</span>
+<span class="font-mono text-slate-500" id="barGithubVal">0 (0%)</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="barGithubFill" style="width: 0%;"></div>
+</div>
+</div>
+<!-- LeetCode item -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-medium text-slate-600">LeetCode Problem Index</span>
+<span class="font-mono text-slate-500" id="barLeetcodeVal">0 (0%)</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="barLeetcodeFill" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Codeforces item -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-medium text-slate-600">Codeforces Elo Ratio</span>
+<span class="font-mono text-slate-500" id="barCodeforcesVal">0 (0%)</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="barCodeforcesFill" style="width: 0%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Latency stamp footer -->
+<div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-400" id="engineStatusRow">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400" id="engineStatusDot"></span>
+<span id="engineStatusText" class="">CALCULATION ENGINE: IDLE</span>
+</span>
+<span id="engineMetaText" class="">TELEMETRY READY</span>
+</div>
+</div>
+<!-- Right Col: DEVELOPER INSIGHT & SKILL OVERVIEW [5 cols] -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Card A: DEVELOPER INSIGHT -->
+<div class="devatlas-card rounded-lg p-5 flex flex-col justify-between flex-1" id="cardDeveloperInsight">
+<div>
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-slate-400">radar</span>
+<span class="text-[14px] font-semibold text-slate-900">Developer Insight</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono text-slate-500 bg-slate-50 border border-slate-200" id="insightBadge">Awaiting Telemetry</span>
+</div>
+<div id="insightContentBox">
+        <div class="py-6 px-4 rounded border border-dashed border-slate-200 bg-slate-50/50 flex flex-col items-center text-center">
+          <div class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 mb-2.5 shadow-2xs">
+            <span class="material-symbols-outlined text-[18px]">lightbulb</span>
+          </div>
+          <p class="text-[12px] text-slate-500 max-w-xs leading-relaxed font-normal">
+            Insights will appear once your coding data is available.
+          </p>
+          <div class="mt-3 flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
+            <span class="material-symbols-outlined text-[13px]">lock</span>
+            <span class="">Requires minimum 1 connected source</span>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="text-[11px] text-slate-400 font-mono mt-3" id="insightFooter">0 models evaluated • 0 behavioral benchmarks</div>
+</div>
+<!-- Card B: SKILL OVERVIEW -->
+<div class="devatlas-card rounded-lg p-5 flex flex-col justify-between flex-1" id="cardSkillOverview">
+<div>
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+<span class="text-[14px] font-semibold text-slate-900">Skill Overview</span>
+<span class="text-[11px] font-mono text-slate-400" id="skillCategoryCount">4 Categories</span>
+</div>
+<div class="space-y-2.5" id="skillRowsContainer">
+<!-- Skill Row 1 -->
+<div>
+<div class="flex justify-between items-center text-[12px] mb-1">
+<span class="text-slate-600 font-medium">Problem Solving</span>
+<span class="font-mono text-slate-500 text-[11px]" id="skillVal1">0%</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="skillBar1" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Skill Row 2 -->
+<div>
+<div class="flex justify-between items-center text-[12px] mb-1">
+<span class="text-slate-600 font-medium">Algorithms</span>
+<span class="font-mono text-slate-500 text-[11px]" id="skillVal2">0%</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="skillBar2" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Skill Row 3 -->
+<div>
+<div class="flex justify-between items-center text-[12px] mb-1">
+<span class="text-slate-600 font-medium">Data Structures</span>
+<span class="font-mono text-slate-500 text-[11px]" id="skillVal3">0%</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="skillBar3" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Skill Row 4 -->
+<div>
+<div class="flex justify-between items-center text-[12px] mb-1">
+<span class="text-slate-600 font-medium">Open Source</span>
+<span class="font-mono text-slate-500 text-[11px]" id="skillVal4">0%</span>
+</div>
+<div class="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-slate-300 w-0 transition-all duration-700" id="skillBar4" style="width: 0%;"></div>
+</div>
+</div>
+</div>
+</div>
+<p class="text-[11px] text-slate-400 pt-3 border-t border-slate-100 mt-2" id="skillFooterNote">Skills will be calculated from your verified coding activity.</p>
+</div>
+</div>
+</section>
+<!-- 3. PLATFORM INTEGRATION CARDS (3 Columns Grid) -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-[14px] font-semibold text-slate-900 tracking-tight">Connected Data Sources</h3>
+<span class="text-[11px] font-mono text-slate-500" id="sourcesAuthorizedLabel">1 of 3 authorized</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- CARD 1: GITHUB CARD -->
+<div class="devatlas-card rounded-lg p-5 flex flex-col justify-between hover:border-slate-300 transition-colors" id="cardGithub">
+<div class="space-y-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-slate-900 text-white flex items-center justify-center p-1.5">
+<svg class="w-full h-full fill-current" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<div>
+<h4 class="text-[14px] font-semibold text-slate-900">GitHub</h4>
+<span class="text-[11px] font-mono text-slate-500">@alexdev</span>
+</div>
+</div>
+<div id="githubBadgeContainer">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+          Not synced
+        </span>
+      </div>
+</div>
+<!-- Stats Grid or Content -->
+<div id="githubStatsArea">
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Repos</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Commits</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Languages</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 leading-relaxed mt-2.5">Connect your GitHub data to start building your verified profile.</p>
+      </div>
+</div>
+<div class="pt-4 mt-2 border-t border-slate-100" id="githubActionArea">
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-[12px] font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('github')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span class="">Sync GitHub Data</span>
+        </button>
+      </div>
+</div>
+<!-- CARD 2: LEETCODE CARD -->
+<div class="devatlas-card rounded-lg p-5 flex flex-col justify-between hover:border-slate-300 transition-colors" id="cardLeetcode">
+<div class="space-y-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div>
+<h4 class="text-[14px] font-semibold text-slate-900">LeetCode</h4>
+<span class="text-[11px] font-mono text-slate-400" id="leetcodeHandleText">Algorithms &amp; DSA</span>
+</div>
+</div>
+<div id="leetcodeBadgeContainer"><span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200">Not connected</span></div>
+</div>
+<!-- Stats Grid or Content -->
+<div id="leetcodeStatsArea">
+        <div class="grid grid-cols-4 gap-1 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[10px] text-slate-400 uppercase font-medium">Solved</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[10px] text-emerald-600 font-medium">Easy</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[10px] text-amber-600 font-medium">Med</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[10px] text-rose-600 font-medium">Hard</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 leading-relaxed mt-2.5">Add your LeetCode username to include your coding activity.</p>
+      </div>
+</div>
+<div class="pt-4 mt-2 border-t border-slate-100" id="leetcodeActionArea">
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="promptConnectAccount('LeetCode')">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span class="">Connect LeetCode</span>
+        </button>
+      </div>
+</div>
+<!-- CARD 3: CODEFORCES CARD -->
+<div class="devatlas-card rounded-lg p-5 flex flex-col justify-between hover:border-slate-300 transition-colors" id="cardCodeforces">
+<div class="space-y-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">equalizer</span>
+</div>
+<div>
+<h4 class="text-[14px] font-semibold text-slate-900">Codeforces</h4>
+<span class="text-[11px] font-mono text-slate-400" id="codeforcesHandleText">Competitive Elo</span>
+</div>
+</div>
+<div id="codeforcesBadgeContainer"><span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200">Not connected</span></div>
+</div>
+<!-- Stats Grid or Content -->
+<div id="codeforcesStatsArea">
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rating</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rank</span><span class="font-mono text-[16px] font-semibold text-slate-400">—</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Contests</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 leading-relaxed mt-2.5">Add your Codeforces handle to include your contest data.</p>
+      </div>
+</div>
+<div class="pt-4 mt-2 border-t border-slate-100" id="codeforcesActionArea">
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="promptConnectAccount('Codeforces')">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span class="">Connect Codeforces</span>
+        </button>
+      </div>
+</div>
+</div>
+</section>
+<!-- 4. CALL TO ACTION / SUMMARY BANNER -->
+<section class="devatlas-card rounded-lg p-6 border-l-4 border-l-emerald-500 bg-gradient-to-r from-emerald-50/20 via-white to-white flex flex-col md:flex-row md:items-center justify-between gap-5" id="summaryBanner">
+<div class="space-y-1.5 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="flex h-2 w-2 relative" id="bannerPulseDot">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<h2 class="text-[16px] font-semibold text-slate-900 tracking-tight" id="bannerTitle">Your DevAtlas profile is ready.</h2>
+</div>
+<p class="text-[13px] text-slate-600 leading-relaxed" id="bannerDescription">Sync your coding platforms to calculate your DevScore and generate your developer insights. All statistics are verified cryptographically and cached securely.</p>
+</div>
+<div class="flex items-center gap-3 flex-shrink-0">
+<button class="inline-flex items-center gap-2 px-4 py-2 rounded bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white font-medium text-[13px] transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400" id="bannerPrimaryBtn" onclick="triggerInteractiveRefresh()">
+<span class="material-symbols-outlined text-[17px]" id="bannerBtnIcon">cloud_sync</span>
+<span id="bannerBtnText" class="">Sync Data</span>
+</button>
+<button class="inline-flex items-center gap-1 px-3 py-2 rounded bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 font-medium text-[13px] transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="alert('Account configuration panel opened.')">
+<span class="">Configure Accounts</span>
+</button>
+</div>
+</section>
+</div>
+<!-- 5. BOTTOM DOCK INTERACTIVE STATE CONTROLS BAR -->
+<div class="mt-6 p-3.5 rounded-lg bg-white text-slate-900 border border-slate-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4"><div class="flex items-center gap-2 font-mono text-[12px]"><span class="material-symbols-outlined text-[17px] text-slate-700">tune</span><span class="font-semibold text-slate-900">STATE SIMULATOR:</span><span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700 text-[11px] font-sans border border-slate-200" id="activeStateIndicator">Initial State (Clean)</span></div><div aria-label="Dashboard State Switcher" class="flex flex-wrap items-center gap-2" role="group"><button class="px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-slate-900 text-white border-slate-900 shadow-xs font-semibold" id="btnStateInitial" onclick="switchDashboardState('initial')">1. Initial (Zero State)</button><button class="px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-white text-slate-700 border-slate-300 hover:bg-slate-50 hover:text-slate-900 font-medium" id="btnStateLoading" onclick="switchDashboardState('loading')">2. Loading (Skeletons)</button><button class="px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-white text-slate-700 border-slate-300 hover:bg-slate-50 hover:text-slate-900 font-medium" id="btnStateSuccess" onclick="switchDashboardState('success')">3. Success (Full Sync)</button><button class="px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-white text-slate-700 border-slate-300 hover:bg-slate-50 hover:text-slate-900 font-medium" id="btnStatePartial" onclick="switchDashboardState('partial')">4. Partial Data State</button><button class="px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-white text-rose-600 border-rose-200 hover:bg-rose-50 hover:text-rose-700 font-medium" id="btnStateError" onclick="switchDashboardState('error')">5. Platform Error State</button></div></div>
+<!-- JAVASCRIPT STATE ENGINE -->
+<script>
+  let currentDashboardState = 'initial';
+  let loadingTimer = null;
+
+  function updateActiveButtonUI(state) {
+    const btnMap = {
+      'initial': 'btnStateInitial',
+      'loading': 'btnStateLoading',
+      'success': 'btnStateSuccess',
+      'partial': 'btnStatePartial',
+      'error': 'btnStateError'
+    };
+    const labelMap = {
+      'initial': 'Initial State (Clean)',
+      'loading': 'Loading / Async Skeletons',
+      'success': 'Success (Full Telemetry)',
+      'partial': 'Partial Data (2 of 3 Sources)',
+      'error': 'Platform Error / Non-blocking'
+    };
+
+    Object.keys(btnMap).forEach(key => {
+      const btn = document.getElementById(btnMap[key]);
+      if (!btn) return;
+      if (key === state) {
+        btn.className = 'px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-primary text-slate-950 border-primary font-semibold shadow-xs';
+      } else {
+        btn.className = 'px-3 py-1.5 rounded text-[11px] font-sans border transition-all bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700 hover:text-white font-medium';
+      }
+    });
+
+    const indicator = document.getElementById('activeStateIndicator');
+    if (indicator) indicator.textContent = labelMap[state] || state;
+  }
+
+  function setSvgGauge(score, colorHex) {
+    const ring = document.getElementById('scoreRingActive');
+    const text = document.getElementById('scoreValueText');
+    if (ring && text) {
+      text.textContent = score;
+      const totalDash = 314.16;
+      const offset = totalDash - (score / 100) * totalDash;
+      ring.style.strokeDashoffset = offset;
+      ring.style.stroke = colorHex || '#3b82f6';
+    }
+  }
+
+  function triggerInteractiveRefresh() {
+    switchDashboardState('loading');
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      switchDashboardState('success');
+    }, 1800);
+  }
+
+  function triggerSingleCardSync(platform) {
+    switchDashboardState('loading');
+    if (loadingTimer) clearTimeout(loadingTimer);
+    loadingTimer = setTimeout(() => {
+      switchDashboardState('success');
+    }, 1400);
+  }
+
+  function promptConnectAccount(platform) {
+    const handle = prompt('Enter your ' + platform + ' username / handle:');
+    if (handle && handle.trim().length > 0) {
+      switchDashboardState('loading');
+      setTimeout(() => {
+        switchDashboardState('partial');
+      }, 1200);
+    }
+  }
+
+  function switchDashboardState(state) {
+    currentDashboardState = state;
+    updateActiveButtonUI(state);
+
+    const notifBanner = document.getElementById('dashboardNotification');
+    const statusBadge = document.getElementById('statusBadge');
+    const syncStatusDot = document.getElementById('syncStatusDot');
+    const syncStatusText = document.getElementById('syncStatusText');
+    const refreshIcon = document.getElementById('refreshIcon');
+    const btnRefreshHeader = document.getElementById('btnRefreshHeader');
+    const btnRefreshLabel = document.getElementById('btnRefreshLabel');
+    const accountTypeBadge = document.getElementById('accountTypeBadge');
+    const stateNotificationTag = document.getElementById('stateNotificationTag');
+
+    // Top Gauge Elements
+    const devScoreBadge = document.getElementById('devScoreBadge');
+    const scoreBadgeDot = document.getElementById('scoreBadgeDot');
+    const scoreBadgeText = document.getElementById('scoreBadgeText');
+    const scoreTitle = document.getElementById('scoreTitle');
+    const scoreDescription = document.getElementById('scoreDescription');
+    const barGithubVal = document.getElementById('barGithubVal');
+    const barGithubFill = document.getElementById('barGithubFill');
+    const barLeetcodeVal = document.getElementById('barLeetcodeVal');
+    const barLeetcodeFill = document.getElementById('barLeetcodeFill');
+    const barCodeforcesVal = document.getElementById('barCodeforcesVal');
+    const barCodeforcesFill = document.getElementById('barCodeforcesFill');
+    const engineStatusDot = document.getElementById('engineStatusDot');
+    const engineStatusText = document.getElementById('engineStatusText');
+    const engineMetaText = document.getElementById('engineMetaText');
+
+    // Insights Elements
+    const insightBadge = document.getElementById('insightBadge');
+    const insightContentBox = document.getElementById('insightContentBox');
+    const insightFooter = document.getElementById('insightFooter');
+
+    // Skills Elements
+    const skillVal1 = document.getElementById('skillVal1');
+    const skillBar1 = document.getElementById('skillBar1');
+    const skillVal2 = document.getElementById('skillVal2');
+    const skillBar2 = document.getElementById('skillBar2');
+    const skillVal3 = document.getElementById('skillVal3');
+    const skillBar3 = document.getElementById('skillBar3');
+    const skillVal4 = document.getElementById('skillVal4');
+    const skillBar4 = document.getElementById('skillBar4');
+    const skillFooterNote = document.getElementById('skillFooterNote');
+
+    // Source Cards
+    const sourcesAuthorizedLabel = document.getElementById('sourcesAuthorizedLabel');
+    const githubBadgeContainer = document.getElementById('githubBadgeContainer');
+    const githubStatsArea = document.getElementById('githubStatsArea');
+    const githubActionArea = document.getElementById('githubActionArea');
+    const leetcodeBadgeContainer = document.getElementById('leetcodeBadgeContainer');
+    const leetcodeStatsArea = document.getElementById('leetcodeStatsArea');
+    const leetcodeActionArea = document.getElementById('leetcodeActionArea');
+    const codeforcesBadgeContainer = document.getElementById('codeforcesBadgeContainer');
+    const codeforcesStatsArea = document.getElementById('codeforcesStatsArea');
+    const codeforcesActionArea = document.getElementById('codeforcesActionArea');
+
+    // Bottom summary banner
+    const summaryBanner = document.getElementById('summaryBanner');
+    const bannerTitle = document.getElementById('bannerTitle');
+    const bannerDescription = document.getElementById('bannerDescription');
+    const bannerPrimaryBtn = document.getElementById('bannerPrimaryBtn');
+    const bannerBtnIcon = document.getElementById('bannerBtnIcon');
+    const bannerBtnText = document.getElementById('bannerBtnText');
+
+    // Reset refresh icon spin
+    refreshIcon.classList.remove('sync-spin');
+    btnRefreshHeader.removeAttribute('disabled');
+    btnRefreshLabel.textContent = 'Refresh Data';
+
+    // -----------------------------------------------------
+    // 1. INITIAL (ZERO STATE)
+    // -----------------------------------------------------
+    if (state === 'initial') {
+      notifBanner.className = 'hidden';
+      accountTypeBadge.textContent = 'FRESH ACCOUNT';
+      accountTypeBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-300';
+      stateNotificationTag.className = 'hidden';
+
+      syncStatusDot.className = 'w-2 h-2 rounded-full bg-slate-400';
+      syncStatusText.textContent = 'Not synced yet';
+
+      setSvgGauge(0, '#94a3b8');
+      devScoreBadge.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono text-slate-500 bg-slate-50 border border-slate-200';
+      scoreBadgeDot.className = 'w-1.5 h-1.5 rounded-full bg-slate-400';
+      scoreBadgeText.textContent = 'Waiting for data';
+      scoreTitle.textContent = 'Waiting for verified coding activity';
+      scoreDescription.textContent = 'Your score will appear after your coding data is synced from integrated developer platforms.';
+
+      barGithubVal.textContent = '0 (0%)'; barGithubFill.style.width = '0%';
+      barLeetcodeVal.textContent = '0 (0%)'; barLeetcodeFill.style.width = '0%';
+      barCodeforcesVal.textContent = '0 (0%)'; barCodeforcesFill.style.width = '0%';
+
+      engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-slate-400';
+      engineStatusText.textContent = 'CALCULATION ENGINE: IDLE';
+      engineMetaText.textContent = 'TELEMETRY READY';
+
+      // Insights
+      insightBadge.textContent = 'Awaiting Telemetry';
+      insightBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono text-slate-500 bg-slate-50 border border-slate-200';
+      insightContentBox.innerHTML = `
+        <div class="py-6 px-4 rounded border border-dashed border-slate-200 bg-slate-50/50 flex flex-col items-center text-center">
+          <div class="w-9 h-9 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-400 mb-2.5 shadow-2xs">
+            <span class="material-symbols-outlined text-[18px]">lightbulb</span>
+          </div>
+          <p class="text-[12px] text-slate-500 max-w-xs leading-relaxed font-normal">
+            Insights will appear once your coding data is available.
+          </p>
+          <div class="mt-3 flex items-center gap-1.5 text-[11px] font-mono text-slate-400">
+            <span class="material-symbols-outlined text-[13px]">lock</span>
+            <span>Requires minimum 1 connected source</span>
+          </div>
+        </div>
+      `;
+      insightFooter.textContent = '0 models evaluated • 0 behavioral benchmarks';
+
+      // Skills
+      skillVal1.textContent = '0%'; skillBar1.style.width = '0%';
+      skillVal2.textContent = '0%'; skillBar2.style.width = '0%';
+      skillVal3.textContent = '0%'; skillBar3.style.width = '0%';
+      skillVal4.textContent = '0%'; skillBar4.style.width = '0%';
+      skillFooterNote.textContent = 'Skills will be calculated from your verified coding activity.';
+
+      // Sources
+      sourcesAuthorizedLabel.textContent = '1 of 3 authorized';
+      githubBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+          Not synced
+        </span>
+      `;
+      githubStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Repos</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Commits</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Languages</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 leading-relaxed mt-2.5">Connect your GitHub data to start building your verified profile.</p>
+      `;
+      githubActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-slate-900 hover:bg-slate-800 active:bg-slate-950 text-white text-[12px] font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('github')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Sync GitHub Data</span>
+        </button>
+      `;
+
+      leetcodeBadgeContainer.innerHTML = `<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200">Not connected</span>`;
+      leetcodeStatsArea.innerHTML = `
+        <div class="grid grid-cols-4 gap-1 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[10px] text-slate-400 uppercase font-medium">Solved</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[10px] text-emerald-600 font-medium">Easy</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[10px] text-amber-600 font-medium">Med</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[10px] text-rose-600 font-medium">Hard</span><span class="font-mono text-[15px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 leading-relaxed mt-2.5">Add your LeetCode username to include your coding activity.</p>
+      `;
+      leetcodeActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="promptConnectAccount('LeetCode')">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span>Connect LeetCode</span>
+        </button>
+      `;
+
+      codeforcesBadgeContainer.innerHTML = `<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200">Not connected</span>`;
+      codeforcesStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rating</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rank</span><span class="font-mono text-[16px] font-semibold text-slate-400">—</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Contests</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 leading-relaxed mt-2.5">Add your Codeforces handle to include your contest data.</p>
+      `;
+      codeforcesActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="promptConnectAccount('Codeforces')">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span>Connect Codeforces</span>
+        </button>
+      `;
+
+      // Summary banner
+      bannerTitle.textContent = 'Your DevAtlas profile is ready.';
+      bannerDescription.textContent = 'Sync your coding platforms to calculate your DevScore and generate your developer insights. All statistics are verified cryptographically and cached securely.';
+      bannerBtnText.textContent = 'Sync Data';
+    }
+
+    // -----------------------------------------------------
+    // 2. LOADING (ASYNC PER-CARD SKELETONS)
+    // -----------------------------------------------------
+    else if (state === 'loading') {
+      refreshIcon.classList.add('sync-spin');
+      btnRefreshHeader.setAttribute('disabled', 'true');
+      btnRefreshLabel.textContent = 'Refreshing...';
+      syncStatusDot.className = 'w-2 h-2 rounded-full bg-amber-400 animate-pulse';
+      syncStatusText.textContent = 'Syncing telemetry...';
+
+      notifBanner.className = 'devatlas-card p-3 rounded border border-blue-200 bg-blue-50/70 text-blue-900 text-[12px] flex items-center justify-between flex-row transition-all';
+      notifBanner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-blue-600 sync-spin">sync</span>
+          <span><strong>Synchronizing APIs:</strong> Ingesting non-blocking commits, problem sets, and rating graphs asynchronously...</span>
+        </div>
+        <span class="text-[11px] font-mono text-blue-700">ASYNC_BATCH_PIPE</span>
+      `;
+
+      devScoreBadge.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono text-amber-700 bg-amber-50 border border-amber-200';
+      scoreBadgeDot.className = 'w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse';
+      scoreBadgeText.textContent = 'Calculating score...';
+      setSvgGauge(0, '#94a3b8');
+
+      scoreTitle.textContent = 'Aggregating platform metrics...';
+      scoreDescription.textContent = 'Fetching and cross-validating cryptographic commit signatures across configured remote endpoints.';
+
+      // Score breakdown pulse bars
+      barGithubVal.innerHTML = `<span class="inline-block w-12 h-3 skeleton-shimmer rounded"></span>`;
+      barGithubFill.style.width = '40%';
+      barGithubFill.className = 'h-full skeleton-shimmer w-2/5';
+      barLeetcodeVal.innerHTML = `<span class="inline-block w-12 h-3 skeleton-shimmer rounded"></span>`;
+      barLeetcodeFill.style.width = '60%';
+      barLeetcodeFill.className = 'h-full skeleton-shimmer w-3/5';
+      barCodeforcesVal.innerHTML = `<span class="inline-block w-12 h-3 skeleton-shimmer rounded"></span>`;
+      barCodeforcesFill.style.width = '30%';
+      barCodeforcesFill.className = 'h-full skeleton-shimmer w-1/3';
+
+      engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse';
+      engineStatusText.textContent = 'CALCULATION ENGINE: INGESTION ACTIVE';
+      engineMetaText.textContent = 'STREAMING TELEMETRY';
+
+      // Insight loading skeleton
+      insightBadge.textContent = 'Synthesizing...';
+      insightBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono text-blue-700 bg-blue-50 border border-blue-200';
+      insightContentBox.innerHTML = `
+        <div class="py-5 px-4 rounded border border-slate-200 bg-slate-50/50 flex flex-col space-y-3">
+          <div class="flex items-center gap-2 text-blue-700 font-medium text-[12px]">
+            <span class="material-symbols-outlined text-[16px] sync-spin">sync</span>
+            <span>Analyzing your verified coding activity...</span>
+          </div>
+          <div class="w-full h-3 skeleton-shimmer rounded"></div>
+          <div class="w-5/6 h-3 skeleton-shimmer rounded"></div>
+          <div class="w-2/3 h-3 skeleton-shimmer rounded"></div>
+        </div>
+      `;
+      insightFooter.textContent = 'Running graph heuristics across commit trees...';
+
+      // Skill Skeletons
+      skillVal1.innerHTML = `<span class="inline-block w-8 h-3 skeleton-shimmer rounded"></span>`;
+      skillVal2.innerHTML = `<span class="inline-block w-8 h-3 skeleton-shimmer rounded"></span>`;
+      skillVal3.innerHTML = `<span class="inline-block w-8 h-3 skeleton-shimmer rounded"></span>`;
+      skillVal4.innerHTML = `<span class="inline-block w-8 h-3 skeleton-shimmer rounded"></span>`;
+      skillFooterNote.textContent = 'Recomputing behavioral percentiles...';
+
+      // GitHub Card Skeleton
+      githubBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200">
+          <span class="material-symbols-outlined text-[13px] sync-spin">sync</span>
+          Syncing GitHub...
+        </span>
+      `;
+      githubStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div class="flex flex-col items-center gap-1"><span class="block text-[11px] text-slate-400">Repos</span><span class="w-10 h-5 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[11px] text-slate-400">Commits</span><span class="w-12 h-5 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[11px] text-slate-400">Languages</span><span class="w-8 h-5 skeleton-shimmer rounded"></span></div>
+        </div>
+        <div class="w-3/4 h-3 skeleton-shimmer rounded mt-3"></div>
+      `;
+      githubActionArea.innerHTML = `
+        <button disabled class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-slate-200 text-slate-500 text-[12px] font-medium cursor-not-allowed">
+          <span class="material-symbols-outlined text-[16px] sync-spin">sync</span>
+          <span>Fetching repos &amp; commits...</span>
+        </button>
+      `;
+
+      // LeetCode Card Skeleton
+      leetcodeBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200">
+          <span class="material-symbols-outlined text-[13px] sync-spin">sync</span>
+          Fetching LeetCode...
+        </span>
+      `;
+      leetcodeStatsArea.innerHTML = `
+        <div class="grid grid-cols-4 gap-1 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div class="flex flex-col items-center gap-1"><span class="block text-[10px] text-slate-400">Solved</span><span class="w-8 h-4 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[10px] text-emerald-600">Easy</span><span class="w-8 h-4 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[10px] text-amber-600">Med</span><span class="w-8 h-4 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[10px] text-rose-600">Hard</span><span class="w-8 h-4 skeleton-shimmer rounded"></span></div>
+        </div>
+        <div class="w-4/5 h-3 skeleton-shimmer rounded mt-3"></div>
+      `;
+      leetcodeActionArea.innerHTML = `
+        <button disabled class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-slate-100 border border-slate-200 text-slate-400 text-[12px] font-medium cursor-not-allowed">
+          <span>Processing problems...</span>
+        </button>
+      `;
+
+      // Codeforces Card Skeleton
+      codeforcesBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200">
+          <span class="material-symbols-outlined text-[13px] sync-spin">sync</span>
+          Fetching Codeforces...
+        </span>
+      `;
+      codeforcesStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div class="flex flex-col items-center gap-1"><span class="block text-[11px] text-slate-400">Rating</span><span class="w-10 h-5 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[11px] text-slate-400">Rank</span><span class="w-10 h-5 skeleton-shimmer rounded"></span></div>
+          <div class="flex flex-col items-center gap-1"><span class="block text-[11px] text-slate-400">Contests</span><span class="w-8 h-5 skeleton-shimmer rounded"></span></div>
+        </div>
+        <div class="w-2/3 h-3 skeleton-shimmer rounded mt-3"></div>
+      `;
+      codeforcesActionArea.innerHTML = `
+        <button disabled class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-slate-100 border border-slate-200 text-slate-400 text-[12px] font-medium cursor-not-allowed">
+          <span>Fetching contest history...</span>
+        </button>
+      `;
+    }
+
+    // -----------------------------------------------------
+    // 3. SUCCESS / FULL DATA STATE
+    // -----------------------------------------------------
+    else if (state === 'success') {
+      accountTypeBadge.textContent = 'VERIFIED DEVELOPER';
+      accountTypeBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200';
+      stateNotificationTag.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-emerald-50 text-emerald-700 border border-emerald-200';
+      stateNotificationTag.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>ALL TELEMETRY SYNCHRONIZED';
+
+      syncStatusDot.className = 'w-2 h-2 rounded-full bg-emerald-500';
+      syncStatusText.textContent = 'Last synced: 2 hours ago';
+
+      notifBanner.className = 'devatlas-card p-3 rounded border border-emerald-200 bg-emerald-50/70 text-emerald-900 text-[12px] flex items-center justify-between flex-row transition-all';
+      notifBanner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-emerald-600">verified</span>
+          <span><strong>All sources connected & verified:</strong> Telemetry fresh. DevScore recalculated to <strong>84/100</strong> (Top 6% globally).</span>
+        </div>
+        <button onclick="document.getElementById('dashboardNotification').className='hidden'" class="text-emerald-700 hover:text-emerald-900 font-mono text-[11px]">Dismiss</button>
+      `;
+
+      // Score Gauge 84
+      setSvgGauge(84, '#10b981');
+      devScoreBadge.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200';
+      scoreBadgeDot.className = 'w-1.5 h-1.5 rounded-full bg-emerald-500';
+      scoreBadgeText.textContent = 'Verified Telemetry Active';
+      scoreTitle.textContent = 'High Impact Contributor';
+      scoreDescription.textContent = 'Cryptographically validated data from all 3 developer platforms. Score updated deterministic 84 / 100.';
+
+      barGithubVal.textContent = '36% (Weight)';
+      barGithubFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barGithubFill.style.width = '88%';
+
+      barLeetcodeVal.textContent = '31% (Weight)';
+      barLeetcodeFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barLeetcodeFill.style.width = '82%';
+
+      barCodeforcesVal.textContent = '17% (Weight)';
+      barCodeforcesFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barCodeforcesFill.style.width = '64%';
+
+      engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-emerald-500';
+      engineStatusText.textContent = 'CALCULATION ENGINE: SYNCHRONIZED';
+      engineMetaText.textContent = 'HASH: 0x9f4a...2c8d';
+
+      // Insight Card Full
+      insightBadge.textContent = 'Verified Insight';
+      insightBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono text-emerald-700 bg-emerald-50 border border-emerald-200';
+      insightContentBox.innerHTML = `
+        <div class="p-3.5 rounded border border-emerald-100 bg-emerald-50/40 text-slate-800 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-700 font-semibold text-[13px]">
+            <span class="material-symbols-outlined text-[18px]">insights</span>
+            <span>High Algorithmic Velocity</span>
+          </div>
+          <p class="text-[12px] text-slate-700 leading-relaxed font-normal">
+            High algorithmic velocity in graph traversal and dynamic programming. Strong open-source contribution cadence across TypeScript microservices with consistent 94th percentile commit frequency.
+          </p>
+          <div class="flex items-center gap-2 pt-1 font-mono text-[11px] text-emerald-700">
+            <span class="px-1.5 py-0.5 bg-emerald-100/70 rounded">+14% vs peer benchmark</span>
+            <span class="px-1.5 py-0.5 bg-emerald-100/70 rounded">High concurrency</span>
+          </div>
+        </div>
+      `;
+      insightFooter.textContent = '14 models evaluated • 128 behavioral benchmarks synced';
+
+      // Skills Full
+      skillVal1.textContent = '88%'; skillBar1.className = 'h-full bg-emerald-500 transition-all duration-700'; skillBar1.style.width = '88%';
+      skillVal2.textContent = '91%'; skillBar2.className = 'h-full bg-emerald-500 transition-all duration-700'; skillBar2.style.width = '91%';
+      skillVal3.textContent = '84%'; skillBar3.className = 'h-full bg-emerald-500 transition-all duration-700'; skillBar3.style.width = '84%';
+      skillVal4.textContent = '76%'; skillBar4.className = 'h-full bg-emerald-500 transition-all duration-700'; skillBar4.style.width = '76%';
+      skillFooterNote.textContent = 'Calculated from 1,284 verified commits and 348 solved algorithmic challenges.';
+
+      // Sources: 3 of 3 Authorized
+      sourcesAuthorizedLabel.textContent = '3 of 3 authorized';
+
+      // GitHub Card
+      githubBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Synced just now
+        </span>
+      `;
+      githubStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Repos</span><span class="font-mono text-[16px] font-semibold text-slate-800">42</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Commits</span><span class="font-mono text-[16px] font-semibold text-slate-800">1,284</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Languages</span><span class="font-mono text-[16px] font-semibold text-slate-800">8</span></div>
+        </div>
+        <div class="flex items-center gap-1.5 text-[11px] text-slate-500 mt-2.5 font-mono">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span>TypeScript, Python, Go, Rust</span>
+        </div>
+      `;
+      githubActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('github')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Sync GitHub Data</span>
+        </button>
+      `;
+
+      // LeetCode Card
+      leetcodeBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Synced just now
+        </span>
+      `;
+      leetcodeStatsArea.innerHTML = `
+        <div class="grid grid-cols-4 gap-1 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[10px] text-slate-400 uppercase font-medium">Solved</span><span class="font-mono text-[15px] font-semibold text-slate-800">348</span></div>
+          <div><span class="block text-[10px] text-emerald-600 font-medium">Easy</span><span class="font-mono text-[15px] font-semibold text-slate-800">142</span></div>
+          <div><span class="block text-[10px] text-amber-600 font-medium">Med</span><span class="font-mono text-[15px] font-semibold text-slate-800">176</span></div>
+          <div><span class="block text-[10px] text-rose-600 font-medium">Hard</span><span class="font-mono text-[15px] font-semibold text-slate-800">30</span></div>
+        </div>
+        <p class="text-[12px] text-slate-600 mt-2.5 flex items-center justify-between">
+          <span>Global Ranking: Top 3.8%</span>
+          <span class="font-mono text-[11px] text-emerald-600">Streak: 45 days</span>
+        </p>
+      `;
+      leetcodeActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('leetcode')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Refresh LeetCode Data</span>
+        </button>
+      `;
+
+      // Codeforces Card
+      codeforcesBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Synced just now
+        </span>
+      `;
+      codeforcesStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rating</span><span class="font-mono text-[16px] font-semibold text-slate-800">1,642</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rank</span><span class="font-mono text-[15px] font-semibold text-blue-600">Expert</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Contests</span><span class="font-mono text-[16px] font-semibold text-slate-800">19</span></div>
+        </div>
+        <p class="text-[12px] text-slate-600 mt-2.5">
+          Max rating: 1,678 • Handle: <span class="font-mono text-slate-800 font-medium">alex_dev</span>
+        </p>
+      `;
+      codeforcesActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('codeforces')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Refresh Codeforces</span>
+        </button>
+      `;
+
+      // Summary banner updated
+      bannerTitle.textContent = 'All Telemetry Ingestion Operational';
+      bannerDescription.textContent = 'Your verified score is 84 / 100. Cryptographic proof is permanently signed and ready for public export.';
+      bannerBtnText.textContent = 'Refresh All Sources';
+    }
+
+    // -----------------------------------------------------
+    // 4. PARTIAL DATA STATE (2 of 3 sources)
+    // -----------------------------------------------------
+    else if (state === 'partial') {
+      accountTypeBadge.textContent = 'PARTIAL PROFILE';
+      accountTypeBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-amber-50 text-amber-700 border border-amber-200';
+      stateNotificationTag.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-amber-50 text-amber-700 border border-amber-200';
+      stateNotificationTag.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>2 OF 3 SOURCES CONNECTED';
+
+      syncStatusDot.className = 'w-2 h-2 rounded-full bg-emerald-500';
+      syncStatusText.textContent = 'Last synced: 35m ago';
+
+      notifBanner.className = 'devatlas-card p-3 rounded border border-amber-200 bg-amber-50/70 text-amber-900 text-[12px] flex items-center justify-between flex-row transition-all';
+      notifBanner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-amber-600">warning</span>
+          <span><strong>Partial Score:</strong> DevScore is computed as <strong>68/100</strong> based on 2 of 3 sources. Connect Codeforces to unlock the remaining weight.</span>
+        </div>
+        <button onclick="promptConnectAccount('Codeforces')" class="font-medium text-[11px] underline text-amber-800 hover:text-amber-950">Connect Codeforces</button>
+      `;
+
+      // Gauge at 68 with partial label
+      setSvgGauge(68, '#f59e0b');
+      devScoreBadge.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono text-amber-700 bg-amber-50 border border-amber-200';
+      scoreBadgeDot.className = 'w-1.5 h-1.5 rounded-full bg-amber-500';
+      scoreBadgeText.textContent = 'Partial Data (2/3)';
+      scoreTitle.textContent = 'Based on available data (2 of 3 sources connected)';
+      scoreDescription.textContent = 'GitHub and LeetCode verified. Add Codeforces to unlock maximum weighting and competitive benchmarks.';
+
+      barGithubVal.textContent = '38 repos (Synced)';
+      barGithubFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barGithubFill.style.width = '75%';
+
+      barLeetcodeVal.textContent = '180 solved (Synced)';
+      barLeetcodeFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barLeetcodeFill.style.width = '55%';
+
+      barCodeforcesVal.textContent = 'Pending connection (0%)';
+      barCodeforcesFill.className = 'h-full bg-slate-300 transition-all duration-700';
+      barCodeforcesFill.style.width = '0%';
+
+      engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-amber-500';
+      engineStatusText.textContent = 'CALCULATION ENGINE: PARTIAL INGESTION';
+      engineMetaText.textContent = 'MISSING: CODEFORCES';
+
+      // Insight partial
+      insightBadge.textContent = 'Preliminary Insight';
+      insightBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono text-amber-700 bg-amber-50 border border-amber-200';
+      insightContentBox.innerHTML = `
+        <div class="p-3.5 rounded border border-amber-100 bg-amber-50/40 text-slate-800 space-y-2">
+          <div class="flex items-center gap-2 text-amber-800 font-semibold text-[13px]">
+            <span class="material-symbols-outlined text-[18px]">insights</span>
+            <span>Solid Open-Source Baseline</span>
+          </div>
+          <p class="text-[12px] text-slate-700 leading-relaxed font-normal">
+            Consistent GitHub commitment cadence and intermediate LeetCode completion rate. Competitive contest performance index will calibrate once Codeforces is linked.
+          </p>
+        </div>
+      `;
+      insightFooter.textContent = '8 models evaluated • 64 behavioral benchmarks synced';
+
+      // Skills partial
+      skillVal1.textContent = '62%'; skillBar1.className = 'h-full bg-amber-500 transition-all duration-700'; skillBar1.style.width = '62%';
+      skillVal2.textContent = '58%'; skillBar2.className = 'h-full bg-amber-500 transition-all duration-700'; skillBar2.style.width = '58%';
+      skillVal3.textContent = '70%'; skillBar3.className = 'h-full bg-emerald-500 transition-all duration-700'; skillBar3.style.width = '70%';
+      skillVal4.textContent = '65%'; skillBar4.className = 'h-full bg-emerald-500 transition-all duration-700'; skillBar4.style.width = '65%';
+      skillFooterNote.textContent = 'Skills calculated from GitHub (890 commits) and LeetCode (180 problems).';
+
+      // Sources: 2 of 3 Authorized
+      sourcesAuthorizedLabel.textContent = '2 of 3 authorized';
+
+      // GitHub Card
+      githubBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Connected
+        </span>
+      `;
+      githubStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Repos</span><span class="font-mono text-[16px] font-semibold text-slate-800">38</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Commits</span><span class="font-mono text-[16px] font-semibold text-slate-800">890</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Languages</span><span class="font-mono text-[16px] font-semibold text-slate-800">5</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 mt-2.5 font-mono text-[11px]">TypeScript, Go, Python, CSS, HTML</p>
+      `;
+      githubActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('github')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Sync GitHub Data</span>
+        </button>
+      `;
+
+      // LeetCode Card
+      leetcodeBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Connected
+        </span>
+      `;
+      leetcodeStatsArea.innerHTML = `
+        <div class="grid grid-cols-4 gap-1 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[10px] text-slate-400 uppercase font-medium">Solved</span><span class="font-mono text-[15px] font-semibold text-slate-800">180</span></div>
+          <div><span class="block text-[10px] text-emerald-600 font-medium">Easy</span><span class="font-mono text-[15px] font-semibold text-slate-800">85</span></div>
+          <div><span class="block text-[10px] text-amber-600 font-medium">Med</span><span class="font-mono text-[15px] font-semibold text-slate-800">82</span></div>
+          <div><span class="block text-[10px] text-rose-600 font-medium">Hard</span><span class="font-mono text-[15px] font-semibold text-slate-800">13</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 mt-2.5">Handle linked: @alex_codes</p>
+      `;
+      leetcodeActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="triggerSingleCardSync('leetcode')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Refresh LeetCode Data</span>
+        </button>
+      `;
+
+      // Codeforces Card (Unconnected with clear CTA)
+      codeforcesBadgeContainer.innerHTML = `<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200">Not connected</span>`;
+      codeforcesStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rating</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rank</span><span class="font-mono text-[16px] font-semibold text-slate-400">—</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Contests</span><span class="font-mono text-[16px] font-semibold text-slate-800">0</span></div>
+        </div>
+        <p class="text-[12px] text-amber-700 bg-amber-50/60 p-2 rounded border border-amber-200/50 leading-relaxed mt-2.5">
+          Add your Codeforces handle to include this data in your DevScore.
+        </p>
+      `;
+      codeforcesActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-slate-900 hover:bg-slate-800 text-white text-[12px] font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-400" onclick="promptConnectAccount('Codeforces')">
+          <span class="material-symbols-outlined text-[16px]">add</span>
+          <span>Connect Codeforces</span>
+        </button>
+      `;
+    }
+
+    // -----------------------------------------------------
+    // 5. PLATFORM ERROR / RETRY STATE (Non-blocking)
+    // -----------------------------------------------------
+    else if (state === 'error') {
+      accountTypeBadge.textContent = 'TELEMETRY WARNING';
+      accountTypeBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-rose-50 text-rose-700 border border-rose-200';
+      stateNotificationTag.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-rose-50 text-rose-700 border border-rose-200';
+      stateNotificationTag.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>GATEWAY TIMEOUT DETECTED';
+
+      syncStatusDot.className = 'w-2 h-2 rounded-full bg-rose-500';
+      syncStatusText.textContent = 'Telemetry timeout';
+
+      notifBanner.className = 'devatlas-card p-3 rounded border border-rose-200 bg-rose-50/80 text-rose-950 text-[12px] flex items-center justify-between flex-row transition-all';
+      notifBanner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-rose-600">error</span>
+          <span><strong>GitHub API 504 Gateway Timeout:</strong> Unable to load GitHub activity. Other cards and cached data remain unaffected.</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="triggerSingleCardSync('github')" class="px-2 py-0.5 rounded bg-rose-600 text-white font-medium text-[11px] hover:bg-rose-700">Retry GitHub</button>
+          <button onclick="document.getElementById('dashboardNotification').className='hidden'" class="text-rose-700 hover:text-rose-900 font-mono text-[11px]">Dismiss</button>
+        </div>
+      `;
+
+      // DevScore keeps cached baseline
+      setSvgGauge(52, '#f43f5e');
+      devScoreBadge.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono text-rose-700 bg-rose-50 border border-rose-200';
+      scoreBadgeDot.className = 'w-1.5 h-1.5 rounded-full bg-rose-500';
+      scoreBadgeText.textContent = 'Stale Telemetry';
+      scoreTitle.textContent = 'DevScore (Cached fallback)';
+      scoreDescription.textContent = 'One source encountered an API timeout. Score shown using last cached snapshot without disrupting dashboard.';
+
+      barGithubVal.textContent = 'Failed to fetch (Error)';
+      barGithubFill.className = 'h-full bg-rose-400 transition-all duration-700';
+      barGithubFill.style.width = '20%';
+
+      barLeetcodeVal.textContent = 'Active (Synced)';
+      barLeetcodeFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barLeetcodeFill.style.width = '60%';
+
+      barCodeforcesVal.textContent = 'Active (Synced)';
+      barCodeforcesFill.className = 'h-full bg-emerald-500 transition-all duration-700';
+      barCodeforcesFill.style.width = '50%';
+
+      engineStatusDot.className = 'w-1.5 h-1.5 rounded-full bg-rose-500';
+      engineStatusText.textContent = 'CALCULATION ENGINE: DEGRADED (SOURCE TIMEOUT)';
+      engineMetaText.textContent = 'ERR_HTTP_504';
+
+      // Insight Card in Error State with inline Retry
+      insightBadge.textContent = 'Unavailable';
+      insightBadge.className = 'inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono text-rose-700 bg-rose-50 border border-rose-200';
+      insightContentBox.innerHTML = `
+        <div class="py-5 px-4 rounded border border-rose-200 bg-rose-50/50 flex flex-col items-center text-center">
+          <div class="w-9 h-9 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mb-2">
+            <span class="material-symbols-outlined text-[18px]">sync_problem</span>
+          </div>
+          <p class="text-[12px] text-rose-800 font-medium">Insight unavailable right now.</p>
+          <p class="text-[11px] text-rose-600 mt-0.5 max-w-xs leading-relaxed">
+            We could not complete algorithmic profiling due to a connection error with GitHub.
+          </p>
+          <button onclick="triggerInteractiveRefresh()" class="mt-3 inline-flex items-center gap-1 px-3 py-1 rounded bg-white hover:bg-rose-50 text-rose-700 border border-rose-300 text-[11px] font-medium shadow-2xs">
+            <span class="material-symbols-outlined text-[13px]">refresh</span>
+            <span>Retry Insight Generator</span>
+          </button>
+        </div>
+      `;
+      insightFooter.textContent = 'Evaluation paused • Secondary telemetry healthy';
+
+      // GitHub Card in EXPLICIT ERROR STATE with Retry Action
+      githubBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-rose-50 text-rose-700 border border-rose-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+          Unable to load
+        </span>
+      `;
+      githubStatsArea.innerHTML = `
+        <div class="p-3 rounded bg-rose-50/70 border border-rose-200 text-left space-y-1.5">
+          <div class="flex items-center gap-1.5 text-rose-700 font-semibold text-[12px]">
+            <span class="material-symbols-outlined text-[15px]">error</span>
+            <span>Unable to load GitHub data</span>
+          </div>
+          <p class="text-[11px] text-rose-700 leading-relaxed">
+            Something went wrong while retrieving your GitHub activity. The upstream server timed out.
+          </p>
+        </div>
+      `;
+      githubActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-rose-600 hover:bg-rose-700 text-white text-[12px] font-medium transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-rose-400" onclick="triggerSingleCardSync('github')">
+          <span class="material-symbols-outlined text-[16px]">refresh</span>
+          <span>Retry GitHub Connection</span>
+        </button>
+      `;
+
+      // LeetCode Card remains ACTIVE & UNAFFECTED
+      leetcodeBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Synced
+        </span>
+      `;
+      leetcodeStatsArea.innerHTML = `
+        <div class="grid grid-cols-4 gap-1 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[10px] text-slate-400 uppercase font-medium">Solved</span><span class="font-mono text-[15px] font-semibold text-slate-800">348</span></div>
+          <div><span class="block text-[10px] text-emerald-600 font-medium">Easy</span><span class="font-mono text-[15px] font-semibold text-slate-800">142</span></div>
+          <div><span class="block text-[10px] text-amber-600 font-medium">Med</span><span class="font-mono text-[15px] font-semibold text-slate-800">176</span></div>
+          <div><span class="block text-[10px] text-rose-600 font-medium">Hard</span><span class="font-mono text-[15px] font-semibold text-slate-800">30</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 mt-2.5">Platform operational (unaultered)</p>
+      `;
+      leetcodeActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs" onclick="triggerSingleCardSync('leetcode')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Refresh LeetCode Data</span>
+        </button>
+      `;
+
+      // Codeforces Card remains ACTIVE & UNAFFECTED
+      codeforcesBadgeContainer.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          Synced
+        </span>
+      `;
+      codeforcesStatsArea.innerHTML = `
+        <div class="grid grid-cols-3 gap-2 p-2.5 rounded bg-slate-50 border border-slate-100 text-center">
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rating</span><span class="font-mono text-[16px] font-semibold text-slate-800">1,642</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Rank</span><span class="font-mono text-[15px] font-semibold text-blue-600">Expert</span></div>
+          <div><span class="block text-[11px] text-slate-400 font-medium">Contests</span><span class="font-mono text-[16px] font-semibold text-slate-800">19</span></div>
+        </div>
+        <p class="text-[12px] text-slate-500 mt-2.5">Platform operational (unaltered)</p>
+      `;
+      codeforcesActionArea.innerHTML = `
+        <button class="w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-[12px] font-medium transition-colors shadow-2xs" onclick="triggerSingleCardSync('codeforces')">
+          <span class="material-symbols-outlined text-[16px]">sync</span>
+          <span>Refresh Codeforces</span>
+        </button>
+      `;
+    }
+  }
+
+  // Initialize in initial state
+  document.addEventListener('DOMContentLoaded', () => {
+    switchDashboardState('initial');
+  });
+</script>
+</div></main><footer class="w-full border-t border-slate-200 bg-white py-space-md"><div class="max-w-7xl mx-auto px-gutter-desktop flex items-center justify-between text-slate-500 font-label-sm text-label-sm"><span class="">© 2025 DevAtlas Infrastructure Telemetry.</span><div class="flex items-center gap-space-md"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>All Systems Operational</span><span class="font-code-sm text-code-sm text-slate-400">v1.0.4-prod</span></div></div></footer>
+
+</body></html>

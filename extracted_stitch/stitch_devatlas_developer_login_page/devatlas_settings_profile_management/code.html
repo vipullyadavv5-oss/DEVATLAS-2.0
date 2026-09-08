@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevAtlas Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #F8FAFC;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .bg-grid-pattern {
+      background-size: 24px 24px;
+      background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+    }
+    .custom-switch {
+      transition: background-color 0.2s ease;
+    }
+    .custom-switch-dot {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-slate-800 bg-grid-pattern flex flex-col justify-between antialiased selection:bg-slate-200">
+
+  <!-- TOP NAVIGATION (Matching Screen 2) -->
+  <header class="w-full border-b border-slate-200 bg-white/95 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand & Primary Nav -->
+      <div class="flex items-center space-x-8">
+        <a href="#" class="flex items-center space-x-2.5 group">
+          <div class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-white shadow-sm ring-1 ring-slate-900/10">
+            <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="font-bold text-slate-900 tracking-tight text-base">DevAtlas</span>
+            <span class="font-mono text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200 font-medium">v1.0</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-1">
+          <a href="#" class="px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-md hover:bg-slate-100 transition-colors">Dashboard</a>
+          <a href="#" class="px-3 py-1.5 text-sm font-medium text-slate-900 bg-slate-100/90 rounded-md border border-slate-200/80 shadow-xs">Settings</a>
+        </nav>
+      </div>
+
+      <!-- Right Nav Actions -->
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        <a href="#" class="inline-flex items-center space-x-1.5 text-xs font-medium text-slate-600 hover:text-slate-900 px-3 py-1.5 rounded-md border border-slate-200 bg-white hover:bg-slate-50 transition-colors shadow-xs">
+          <span>View Public Profile</span>
+          <svg class="w-3.5 h-3.5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+
+        <div class="flex items-center space-x-2 pl-2 border-l border-slate-200">
+          <div class="relative">
+            <div class="w-7 h-7 rounded-full bg-slate-800 text-white flex items-center justify-center font-mono text-xs font-semibold ring-2 ring-slate-100">
+              A
+            </div>
+            <span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-white"></span>
+          </div>
+          <span class="hidden sm:inline font-mono text-xs font-medium text-slate-700">@alexdev</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+
+    <!-- PAGE HEADER -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Settings</h1>
+          <p class="text-sm text-slate-500 mt-1">Manage your developer profiles and public visibility.</p>
+        </div>
+        <div class="hidden sm:flex items-center space-x-2 text-xs font-mono text-slate-500 bg-white border border-slate-200/80 px-2.5 py-1 rounded-md shadow-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span>Config Ready</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS STACK -->
+    <div class="space-y-6">
+
+      <!-- 1. GITHUB ACCOUNT SECTION -->
+      <section class="bg-white border border-slate-200/90 rounded-xl p-6 shadow-xs">
+        <div class="flex items-start justify-between flex-wrap gap-4 pb-5 border-b border-slate-100">
+          <div>
+            <h2 class="text-base font-semibold text-slate-900 flex items-center gap-2">
+              <span>GitHub Account</span>
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">Primary authentication provider and verified developer identity.</p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Connected
+          </span>
+        </div>
+
+        <div class="mt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-lg bg-slate-50/70 border border-slate-200/70">
+          <div class="flex items-center space-x-3.5">
+            <div class="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center text-white shrink-0 shadow-xs">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="flex items-center space-x-2">
+                <span class="text-sm font-semibold text-slate-900">GitHub</span>
+                <span class="font-mono text-xs text-slate-600 font-medium">@alexdev</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-0.5">GitHub is used to verify your developer identity and retrieve your coding activity.</p>
+            </div>
+          </div>
+
+          <div class="flex items-center sm:self-center shrink-0">
+            <span class="inline-flex items-center space-x-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 px-3 py-1.5 rounded-md shadow-xs">
+              <svg class="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Read-only access</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. CODING PROFILES SECTION -->
+      <section class="bg-white border border-slate-200/90 rounded-xl p-6 shadow-xs">
+        <div class="pb-5 border-b border-slate-100">
+          <h2 class="text-base font-semibold text-slate-900">Coding Profiles</h2>
+          <p class="text-xs text-slate-500 mt-0.5">Connect your coding platforms to include their verified activity in your DevScore.</p>
+        </div>
+
+        <div class="mt-6 space-y-6">
+
+          <!-- LEETCODE INPUT -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="leetcode-username" class="text-xs font-semibold text-slate-700 flex items-center gap-2">
+                <div class="w-4 h-4 rounded bg-amber-500/10 text-amber-600 flex items-center justify-center p-0.5">
+                  <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.264a1.374 1.374 0 0 0-.438.961v.172c0 .36.14.707.391.961l5.406 5.826a1.374 1.374 0 0 0 1.922 0l5.406-5.826a1.374 1.374 0 0 0 0-1.922L14.444.438A1.374 1.374 0 0 0 13.483 0zm-4.14 8.797l4.14 4.462 4.14-4.462-4.14-4.462-4.14 4.462zM3 14a1 1 0 0 1 1-1h16a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm3 5a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1z"/>
+                  </svg>
+                </div>
+                <span>LeetCode Username</span>
+              </label>
+              <span id="leetcode-badge" class="text-[11px] font-mono text-slate-400">Not connected</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2.5">
+              <div class="relative flex-grow">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                  <span class="font-mono text-xs font-medium">lc/</span>
+                </div>
+                <input 
+                  type="text" 
+                  id="leetcode-username" 
+                  value=""
+                  placeholder="Enter your LeetCode username"
+                  class="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all shadow-xs"
+                >
+              </div>
+              <button 
+                type="button" 
+                id="leetcode-btn"
+                onclick="toggleLeetCodeState()"
+                class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-xs transition-colors shrink-0"
+              >
+                Connect
+              </button>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs pt-0.5">
+              <p class="text-slate-500">Optional — used to calculate your DevScore.</p>
+              <!-- Small inline validation simulation slot -->
+              <p id="leetcode-error" class="hidden text-amber-600 font-medium text-xs">Username not found. Check the username and try again.</p>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-100"></div>
+
+          <!-- CODEFORCES INPUT -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <label for="codeforces-handle" class="text-xs font-semibold text-slate-700 flex items-center gap-2">
+                <div class="w-4 h-4 rounded bg-sky-500/10 text-sky-600 flex items-center justify-center p-0.5">
+                  <svg class="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="2" y="10" width="4" height="12" rx="1"/>
+                    <rect x="10" y="4" width="4" height="18" rx="1"/>
+                    <rect x="18" y="14" width="4" height="8" rx="1"/>
+                  </svg>
+                </div>
+                <span>Codeforces Handle</span>
+              </label>
+              <span id="codeforces-badge" class="text-[11px] font-mono text-slate-400">Not connected</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2.5">
+              <div class="relative flex-grow">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                  <span class="font-mono text-xs font-medium">cf/</span>
+                </div>
+                <input 
+                  type="text" 
+                  id="codeforces-handle" 
+                  value=""
+                  placeholder="Enter your Codeforces handle"
+                  class="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-all shadow-xs"
+                >
+              </div>
+              <button 
+                type="button" 
+                id="codeforces-btn"
+                onclick="toggleCodeforcesState()"
+                class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-xs transition-colors shrink-0"
+              >
+                Connect
+              </button>
+            </div>
+            
+            <div class="flex items-center justify-between text-xs pt-0.5">
+              <p class="text-slate-500">Optional — used to calculate your DevScore.</p>
+              <p id="codeforces-error" class="hidden text-amber-600 font-medium text-xs">Unable to verify this profile right now. Please try again.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. PUBLIC PROFILE SECTION & URL TOGGLE -->
+      <section class="bg-white border border-slate-200/90 rounded-xl p-6 shadow-xs">
+        <div class="flex items-start justify-between gap-4 pb-5 border-b border-slate-100">
+          <div>
+            <h2 class="text-base font-semibold text-slate-900">Public Profile</h2>
+            <p class="text-xs text-slate-500 mt-0.5">Allow recruiters and mentors to view your verified developer profile.</p>
+          </div>
+          
+          <!-- Status Badge -->
+          <span id="visibility-badge" class="inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200">
+            <span id="visibility-dot" class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+            <span id="visibility-text">Private</span>
+          </span>
+        </div>
+
+        <div class="mt-6 space-y-6">
+
+          <!-- Toggle Row -->
+          <div class="flex items-center justify-between p-4 rounded-lg bg-slate-50/70 border border-slate-200/70">
+            <div class="pr-4">
+              <label for="profile-toggle" class="text-sm font-semibold text-slate-900 cursor-pointer block">Make my profile public</label>
+              <p class="text-xs text-slate-500 mt-0.5 leading-relaxed">Anyone with your public profile link can view your developer statistics.</p>
+            </div>
+
+            <!-- Custom Switch: Default OFF (Private) -->
+            <button 
+              type="button" 
+              role="switch" 
+              aria-checked="false" 
+              id="profile-toggle"
+              onclick="toggleProfileVisibility()"
+              class="custom-switch relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+            >
+              <span class="sr-only">Make my profile public</span>
+              <span 
+                id="toggle-knob"
+                class="custom-switch-dot pointer-events-none inline-block h-5 w-5 translate-x-0 rounded-full bg-white shadow-md transform ring-0"
+              ></span>
+            </button>
+          </div>
+
+          <!-- 4. PUBLIC PROFILE URL (Conditionally shown when enabled) -->
+          <div id="public-url-container" class="hidden transition-all duration-200 space-y-3 pt-2">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-semibold text-slate-700">Your public profile link</label>
+              <span class="text-[11px] font-mono text-emerald-600 font-medium flex items-center gap-1">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Live & Indexed
+              </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-2 bg-slate-50 rounded-lg border border-slate-200">
+              <div class="flex items-center pl-2 font-mono text-xs text-slate-800 select-all truncate flex-grow">
+                <span class="text-slate-400 select-none">https://</span>devatlas.app/u/alexdev
+              </div>
+
+              <div class="flex items-center gap-2 shrink-0">
+                <button 
+                  type="button" 
+                  id="copy-btn"
+                  onclick="copyProfileUrl()"
+                  class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 rounded-md shadow-xs transition-colors"
+                >
+                  <svg id="copy-icon" class="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span id="copy-label">Copy link</span>
+                </button>
+
+                <a 
+                  href="https://devatlas.app/u/username" 
+                  target="_blank"
+                  class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 rounded-md shadow-xs transition-colors"
+                >
+                  <span>Open Profile</span>
+                  <svg class="w-3.5 h-3.5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SAVE / UPDATE BAR -->
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div id="save-status" class="flex items-center gap-2 text-xs font-medium text-slate-500">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+          <span>All changes in this tab are auto-drafted locally.</span>
+        </div>
+
+        <div class="flex items-center space-x-3 w-full sm:w-auto justify-end">
+          <button 
+            type="button" 
+            onclick="resetChanges()"
+            class="w-full sm:w-auto px-4 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg shadow-xs transition-colors"
+          >
+            Cancel
+          </button>
+          
+          <button 
+            type="button" 
+            id="save-btn"
+            onclick="saveSettings()"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-xs transition-colors"
+          >
+            <span>Save Changes</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIMULATION STATES TOOLBAR (Matching DevAtlas Dashboard pattern) -->
+    <div class="mt-12 p-3 bg-white/80 border border-slate-200 rounded-lg flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600 shadow-xs">
+      <div class="flex items-center gap-2 font-mono">
+        <span class="text-slate-400">⚡ SIMULATION CONTROLS:</span>
+        <span id="sim-state-text" class="text-slate-700 font-semibold">Active: Default Clean State</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="simulateConnectedProfiles()" class="px-2.5 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded text-[11px] font-medium transition-colors">
+          Fill Connected Profiles
+        </button>
+        <button onclick="simulateProfileErrors()" class="px-2.5 py-1 bg-amber-50 text-amber-700 hover:bg-amber-100 border border-amber-200 rounded text-[11px] font-medium transition-colors">
+          Toggle Error Messages
+        </button>
+        <button onclick="toggleProfileVisibility(true)" class="px-2.5 py-1 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 rounded text-[11px] font-medium transition-colors">
+          Toggle Public Mode
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full border-t border-slate-200/80 bg-white py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+      <div class="flex items-center space-x-2">
+        <span>© 2025 DevAtlas Infrastructure Telemetry.</span>
+      </div>
+      <div class="flex items-center space-x-4 font-mono text-[11px]">
+        <span class="flex items-center space-x-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span class="text-slate-700">Settings Engine Active</span>
+        </span>
+        <span class="text-slate-300">|</span>
+        <span class="text-slate-500">v1.0.4-prod</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC FOR INTERACTIONS -->
+  <script>
+    let isPublic = false;
+    let leetcodeConnected = false;
+    let codeforcesConnected = false;
+
+    function toggleProfileVisibility(forceState) {
+      if (typeof forceState === 'boolean') {
+        isPublic = forceState;
+      } else {
+        isPublic = !isPublic;
+      }
+
+      const toggle = document.getElementById('profile-toggle');
+      const knob = document.getElementById('toggle-knob');
+      const container = document.getElementById('public-url-container');
+      const badge = document.getElementById('visibility-badge');
+      const dot = document.getElementById('visibility-dot');
+      const text = document.getElementById('visibility-text');
+
+      toggle.setAttribute('aria-checked', isPublic.toString());
+
+      if (isPublic) {
+        toggle.classList.remove('bg-slate-200');
+        toggle.classList.add('bg-slate-900');
+        knob.classList.remove('translate-x-0');
+        knob.classList.add('translate-x-5');
+        container.classList.remove('hidden');
+
+        badge.className = "inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200";
+        dot.className = "w-1.5 h-1.5 rounded-full bg-emerald-500";
+        text.innerText = "Public";
+      } else {
+        toggle.classList.remove('bg-slate-900');
+        toggle.classList.add('bg-slate-200');
+        knob.classList.remove('translate-x-5');
+        knob.classList.add('translate-x-0');
+        container.classList.add('hidden');
+
+        badge.className = "inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200";
+        dot.className = "w-1.5 h-1.5 rounded-full bg-slate-400";
+        text.innerText = "Private";
+      }
+    }
+
+    function toggleLeetCodeState() {
+      const input = document.getElementById('leetcode-username');
+      const btn = document.getElementById('leetcode-btn');
+      const badge = document.getElementById('leetcode-badge');
+      const err = document.getElementById('leetcode-error');
+      err.classList.add('hidden');
+
+      if (!leetcodeConnected) {
+        if (!input.value.trim()) input.value = "alex_algorithms";
+        leetcodeConnected = true;
+        btn.innerText = "Update";
+        btn.className = "inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-xs transition-colors shrink-0";
+        badge.innerText = "Connected";
+        badge.className = "text-[11px] font-mono text-emerald-600 font-medium";
+      } else {
+        // Updated state animation
+        btn.innerText = "Saved";
+        setTimeout(() => { btn.innerText = "Update"; }, 1200);
+      }
+    }
+
+    function toggleCodeforcesState() {
+      const input = document.getElementById('codeforces-handle');
+      const btn = document.getElementById('codeforces-btn');
+      const badge = document.getElementById('codeforces-badge');
+      const err = document.getElementById('codeforces-error');
+      err.classList.add('hidden');
+
+      if (!codeforcesConnected) {
+        if (!input.value.trim()) input.value = "alex_cf";
+        codeforcesConnected = true;
+        btn.innerText = "Update";
+        btn.className = "inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-xs transition-colors shrink-0";
+        badge.innerText = "Connected";
+        badge.className = "text-[11px] font-mono text-emerald-600 font-medium";
+      } else {
+        btn.innerText = "Saved";
+        setTimeout(() => { btn.innerText = "Update"; }, 1200);
+      }
+    }
+
+    function copyProfileUrl() {
+      const label = document.getElementById('copy-label');
+      const original = label.innerText;
+      navigator.clipboard?.writeText("https://devatlas.app/u/alexdev");
+      label.innerText = "Copied!";
+      setTimeout(() => {
+        label.innerText = original;
+      }, 1500);
+    }
+
+    function saveSettings() {
+      const btn = document.getElementById('save-btn');
+      const status = document.getElementById('save-status');
+
+      btn.disabled = true;
+      btn.innerHTML = `<svg class="animate-spin -ml-1 mr-1.5 h-3.5 w-3.5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Saving...`;
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<span>Save Changes</span>`;
+        status.innerHTML = `
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span class="text-emerald-700 font-medium">Changes saved successfully.</span>
+        `;
+        setTimeout(() => {
+          status.innerHTML = `
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+            <span>All changes in this tab are auto-drafted locally.</span>
+          `;
+        }, 4000);
+      }, 600);
+    }
+
+    function resetChanges() {
+      document.getElementById('leetcode-username').value = "";
+      document.getElementById('codeforces-handle').value = "";
+      leetcodeConnected = false;
+      codeforcesConnected = false;
+      document.getElementById('leetcode-btn').innerText = "Connect";
+      document.getElementById('leetcode-btn').className = "inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-xs transition-colors shrink-0";
+      document.getElementById('codeforces-btn').innerText = "Connect";
+      document.getElementById('codeforces-btn').className = "inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-xs transition-colors shrink-0";
+      document.getElementById('leetcode-badge').innerText = "Not connected";
+      document.getElementById('leetcode-badge').className = "text-[11px] font-mono text-slate-400";
+      document.getElementById('codeforces-badge').innerText = "Not connected";
+      document.getElementById('codeforces-badge').className = "text-[11px] font-mono text-slate-400";
+      toggleProfileVisibility(false);
+      document.getElementById('leetcode-error').classList.add('hidden');
+      document.getElementById('codeforces-error').classList.add('hidden');
+    }
+
+    function simulateConnectedProfiles() {
+      document.getElementById('leetcode-username').value = "alex_algorithms";
+      toggleLeetCodeState();
+      document.getElementById('codeforces-handle').value = "alex_master";
+      toggleCodeforcesState();
+      toggleProfileVisibility(true);
+      document.getElementById('sim-state-text').innerText = "Active: Profiles Connected + Public";
+    }
+
+    function simulateProfileErrors() {
+      const err1 = document.getElementById('leetcode-error');
+      const err2 = document.getElementById('codeforces-error');
+      const isHidden = err1.classList.contains('hidden');
+      if (isHidden) {
+        err1.classList.remove('hidden');
+        err2.classList.remove('hidden');
+        document.getElementById('sim-state-text').innerText = "Active: Validation Errors Displayed";
+      } else {
+        err1.classList.add('hidden');
+        err2.classList.add('hidden');
+        document.getElementById('sim-state-text').innerText = "Active: Errors Dismissed";
+      }
+    }
+  </script>
+</body>
+</html>

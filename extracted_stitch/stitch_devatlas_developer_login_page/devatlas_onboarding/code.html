@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevAtlas Onboarding - Connect Profiles</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              surface: '#F8FAFC',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+              'border-focus': '#94A3B8',
+              navy: '#0F172A',
+              slate: '#334155',
+              muted: '#64748B',
+              subtle: '#94A3B8',
+              emerald: '#10B981',
+              'emerald-subtle': '#ECFDF5',
+              'emerald-border': '#A7F3D0',
+              accent: '#2563EB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .dot-pattern {
+      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    input:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] min-h-screen dot-pattern text-brand-navy font-sans antialiased flex flex-col justify-between p-4 sm:p-6 selection:bg-slate-200">
+
+  <div class="flex-1 flex items-center justify-center py-6 sm:py-10">
+    <main class="w-full max-w-[540px] bg-white rounded-2xl border border-[#E2E8F0] shadow-[0_4px_24px_-4px_rgba(15,23,42,0.06),0_1px_2px_0_rgba(15,23,42,0.04)] p-6 sm:p-8 transition-all">
+      
+      <!-- Top Bar: Logo & Step Badge -->
+      <div class="flex items-center justify-between gap-3 mb-6">
+        <div class="flex items-center gap-2.5">
+          <!-- DevAtlas Logo -->
+          <div class="relative w-8 h-8 rounded-lg bg-[#0F172A] flex items-center justify-center text-white shadow-sm flex-shrink-0">
+            <svg class="w-4 h-4 text-slate-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span class="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-[#10B981] ring-2 ring-white"></span>
+          </div>
+          <span class="font-semibold text-base tracking-tight text-[#0F172A]">DevAtlas</span>
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#F1F5F9] border border-[#E2E8F0] text-[11px] font-mono font-medium text-[#475569] tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+          STEP 1 OF 1
+        </div>
+      </div>
+
+      <!-- Main Heading & Subtitle -->
+      <div class="space-y-1.5 mb-6">
+        <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A]">
+          Complete your developer profile
+        </h1>
+        <p class="text-sm text-[#64748B] leading-relaxed">
+          Connect your coding profiles to build your verified DevScore.
+        </p>
+      </div>
+
+      <!-- GitHub Connected Status Chip -->
+      <div class="mb-6 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-between text-xs">
+        <div class="flex items-center gap-2.5">
+          <div class="w-6 h-6 rounded-md bg-white border border-[#E2E8F0] flex items-center justify-center text-[#0F172A] shadow-xs">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-medium text-[#0F172A] flex items-center gap-1.5">
+              <span>GitHub</span>
+              <span class="font-mono text-[11px] text-[#64748B]">telemetry verified</span>
+            </div>
+          </div>
+        </div>
+        <div class="inline-flex items-center gap-1 text-[11px] font-medium text-[#059669] bg-[#ECFDF5] px-2 py-0.5 rounded-full border border-[#A7F3D0]">
+          <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Connected
+        </div>
+      </div>
+
+      <!-- Form Inputs Container -->
+      <form id="profileForm" onsubmit="event.preventDefault(); handleContinue();" class="space-y-5">
+
+        <!-- LeetCode Input Section -->
+        <div class="space-y-1.5">
+          <div class="flex items-center justify-between">
+            <label for="leetcodeInput" class="block text-xs font-semibold text-[#0F172A] tracking-tight">
+              LeetCode Username
+            </label>
+            <span class="text-[11px] font-mono text-[#94A3B8] font-normal">Optional</span>
+          </div>
+
+          <div class="relative rounded-lg">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#64748B]">
+              <!-- LeetCode SVG Icon -->
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.27 5.27 0 0 0-3.85-1.428c-1.46 0-2.842.57-3.874 1.602l-4.32 4.38c-1.032 1.033-1.601 2.415-1.601 3.876 0 1.46.57 2.843 1.602 3.875l4.331 4.363c1.033 1.033 2.415 1.602 3.875 1.602 1.46 0 2.843-.57 3.875-1.602l2.609-2.636c.514-.515.496-1.366-.039-1.901-.535-.536-1.386-.554-1.9-.038z"/>
+                <path d="M10.802 13.988h8.861c.742 0 1.343-.601 1.343-1.343s-.601-1.344-1.343-1.344h-8.861c-.742 0-1.343.601-1.343 1.344s.601 1.343 1.343 1.343z" fill="#FFA116"/>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              id="leetcodeInput" 
+              name="leetcode"
+              placeholder="Enter your LeetCode username" 
+              class="w-full pl-9 pr-8 py-2.5 bg-[#FFFFFF] border border-[#E2E8F0] rounded-lg text-sm text-[#0F172A] placeholder-[#94A3B8] transition-all focus:border-[#0F172A] focus:ring-1 focus:ring-[#0F172A]"
+              autocomplete="off"
+              spellcheck="false"
+              oninput="validateLeetCode()"
+            />
+            <div id="leetcodeCheck" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-[#10B981]">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between min-h-[18px]">
+            <p id="leetcodeHelp" class="text-[11px] text-[#64748B]">
+              Optional — used to include LeetCode data in your DevScore.
+            </p>
+            <p id="leetcodeError" class="hidden text-[11px] text-[#E11D48] font-medium"></p>
+          </div>
+        </div>
+
+        <!-- Codeforces Input Section -->
+        <div class="space-y-1.5">
+          <div class="flex items-center justify-between">
+            <label for="codeforcesInput" class="block text-xs font-semibold text-[#0F172A] tracking-tight">
+              Codeforces Handle
+            </label>
+            <span class="text-[11px] font-mono text-[#94A3B8] font-normal">Optional</span>
+          </div>
+
+          <div class="relative rounded-lg">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#64748B]">
+              <!-- Codeforces Bar Icon -->
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="2" y="11" width="4.5" height="10" rx="1" fill="#F44336"/>
+                <rect x="9.5" y="4" width="4.5" height="17" rx="1" fill="#2196F3"/>
+                <rect x="17" y="8" width="4.5" height="13" rx="1" fill="#FFC107"/>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              id="codeforcesInput" 
+              name="codeforces"
+              placeholder="Enter your Codeforces handle" 
+              class="w-full pl-9 pr-8 py-2.5 bg-[#FFFFFF] border border-[#E2E8F0] rounded-lg text-sm text-[#0F172A] placeholder-[#94A3B8] transition-all focus:border-[#0F172A] focus:ring-1 focus:ring-[#0F172A]"
+              autocomplete="off"
+              spellcheck="false"
+              oninput="validateCodeforces()"
+            />
+            <div id="codeforcesCheck" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-[#10B981]">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between min-h-[18px]">
+            <p id="codeforcesHelp" class="text-[11px] text-[#64748B]">
+              Optional — used to include Codeforces data in your DevScore.
+            </p>
+            <p id="codeforcesError" class="hidden text-[11px] text-[#E11D48] font-medium"></p>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="pt-2 space-y-3">
+          <button 
+            type="submit" 
+            id="continueBtn"
+            class="w-full h-11 px-4 rounded-lg bg-[#0F172A] hover:bg-[#1E293B] active:bg-[#020617] text-white text-sm font-semibold tracking-tight transition-colors shadow-sm flex items-center justify-center gap-2 focus:ring-2 focus:ring-[#0F172A] focus:ring-offset-2"
+          >
+            <span id="btnText">Continue to Dashboard</span>
+            <svg id="btnArrow" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            <svg id="btnSpinner" class="hidden animate-spin w-4 h-4 text-white" viewBox="0 0 24 24" fill="none">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </button>
+
+          <button 
+            type="button" 
+            onclick="handleSkip()"
+            class="w-full py-2 text-center text-xs font-medium text-[#64748B] hover:text-[#0F172A] transition-colors"
+          >
+            Skip for now
+          </button>
+        </div>
+      </form>
+
+      <!-- Trust Note & Divider -->
+      <div class="mt-6 pt-5 border-t border-[#F1F5F9] flex items-center justify-between text-[11px] text-[#64748B]">
+        <div class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-[#94A3B8] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>You can add or change these profiles later in Settings.</span>
+        </div>
+        <span class="hidden sm:inline font-mono text-[10px] text-[#94A3B8]">READ-ONLY</span>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Bottom subtle telemetry footer matching DevAtlas system -->
+  <footer class="w-full max-w-[540px] mx-auto px-2 flex items-center justify-between text-[11px] font-mono text-[#94A3B8] pb-2">
+    <span>DevAtlas Onboarding v1.0</span>
+    <span class="flex items-center gap-1">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+      Telemetry Sync Ready
+    </span>
+  </footer>
+
+  <script>
+    function validateLeetCode() {
+      const input = document.getElementById('leetcodeInput');
+      const error = document.getElementById('leetcodeError');
+      const check = document.getElementById('leetcodeCheck');
+      const val = input.value.trim();
+
+      // Alphanumeric with dashes/underscores, 3-30 chars
+      const regex = /^[a-zA-Z0-9_-]{3,30}$/;
+
+      if (!val) {
+        error.classList.add('hidden');
+        check.classList.add('hidden');
+        input.classList.remove('border-[#E11D48]', 'focus:border-[#E11D48]', 'focus:ring-[#E11D48]');
+        return true;
+      }
+
+      if (!regex.test(val)) {
+        error.textContent = 'Invalid format (3–30 letters, numbers, _ or -)';
+        error.classList.remove('hidden');
+        check.classList.add('hidden');
+        input.classList.add('border-[#E11D48]', 'focus:border-[#E11D48]', 'focus:ring-[#E11D48]');
+        return false;
+      } else {
+        error.classList.add('hidden');
+        check.classList.remove('hidden');
+        input.classList.remove('border-[#E11D48]', 'focus:border-[#E11D48]', 'focus:ring-[#E11D48]');
+        return true;
+      }
+    }
+
+    function validateCodeforces() {
+      const input = document.getElementById('codeforcesInput');
+      const error = document.getElementById('codeforcesError');
+      const check = document.getElementById('codeforcesCheck');
+      const val = input.value.trim();
+
+      // Alphanumeric, underscores, periods, hyphens, 3-24 chars
+      const regex = /^[a-zA-Z0-9_.-]{3,24}$/;
+
+      if (!val) {
+        error.classList.add('hidden');
+        check.classList.add('hidden');
+        input.classList.remove('border-[#E11D48]', 'focus:border-[#E11D48]', 'focus:ring-[#E11D48]');
+        return true;
+      }
+
+      if (!regex.test(val)) {
+        error.textContent = 'Invalid handle (3–24 letters, numbers, ., _ or -)';
+        error.classList.remove('hidden');
+        check.classList.add('hidden');
+        input.classList.add('border-[#E11D48]', 'focus:border-[#E11D48]', 'focus:ring-[#E11D48]');
+        return false;
+      } else {
+        error.classList.add('hidden');
+        check.classList.remove('hidden');
+        input.classList.remove('border-[#E11D48]', 'focus:border-[#E11D48]', 'focus:ring-[#E11D48]');
+        return true;
+      }
+    }
+
+    function handleContinue() {
+      const validLC = validateLeetCode();
+      const validCF = validateCodeforces();
+
+      if (!validLC || !validCF) return;
+
+      const btn = document.getElementById('continueBtn');
+      const btnText = document.getElementById('btnText');
+      const arrow = document.getElementById('btnArrow');
+      const spinner = document.getElementById('btnSpinner');
+
+      btnText.textContent = 'Connecting & Calculating DevScore…';
+      arrow.classList.add('hidden');
+      spinner.classList.remove('hidden');
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btnText.textContent = 'Redirecting to Dashboard…';
+      }, 1200);
+    }
+
+    function handleSkip() {
+      const btnText = document.getElementById('btnText');
+      const arrow = document.getElementById('btnArrow');
+      const spinner = document.getElementById('btnSpinner');
+      const btn = document.getElementById('continueBtn');
+
+      btnText.textContent = 'Redirecting to Dashboard…';
+      arrow.classList.add('hidden');
+      spinner.classList.remove('hidden');
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>

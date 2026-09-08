@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+}
+
+/* Technical background grid pattern matching Stitch export */
+.technical-dot-grid {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Hide scrollbars for clean technical aesthetic */
+::-webkit-scrollbar {
+  display: none;
+}
