@@ -1,6 +1,15 @@
 node_modules/
 .next/
 dist/
+*.log
+
+# Environment files — NEVER commit real .env files
 .env
 .env.local
-*.log
+.env.production
+.env.development
+.env.staging
+*.env
+backend/.env
+backend/.env.local
+backend/.env.production
