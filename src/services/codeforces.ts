@@ -2,18 +2,21 @@
  * CODEFORCES TELEMETRY SERVICE
  * -----------------------------------------------------------------------------
  * File: src/services/codeforces.ts
- * Purpose: Retrieves competitive programming contest rating and rank from Codeforces.
- * 
- * Future Integration Note:
- * This service will interface with official Codeforces API v2 endpoints:
- * GET https://codeforces.com/api/user.info?handles={handle}
- * GET https://codeforces.com/api/user.rating?handle={handle}
+ * Purpose: Retrieves competitive programming stats from the DEVATLAS backend.
+ *
+ * Backend endpoint:
+ *   GET /api/codeforces/profile?handle={handle}
+ *
+ * The backend calls the official Codeforces REST API v1 (public, no auth needed).
+ * We proxy through the backend for consistency and to keep all API logic server-side.
  */
 
 import { CodeforcesStats } from '../types';
+import { fetchCodeforcesProfile } from '../lib/api';
 
 /**
- * Returns initial zero-value Codeforces stats when handle is linked.
+ * Returns initial zero-value Codeforces stats.
+ * Used when a handle is linked but hasn't been synced yet.
  */
 export function getInitialCodeforcesStats(handle: string): CodeforcesStats {
   return {
@@ -25,17 +28,20 @@ export function getInitialCodeforcesStats(handle: string): CodeforcesStats {
 }
 
 /**
- * Fetches verified contest performance metrics from Codeforces.
- * 
- * TODO: Replace with REST call to Codeforces public API.
+ * Fetches real Codeforces statistics from the DEVATLAS backend.
+ * The backend calls the official Codeforces API.
+ *
+ * Throws on error — callers must handle the error state explicitly.
+ * DevAtlas never silently replaces failures with fake zeros.
  */
 export async function fetchCodeforcesTelemetry(handle: string): Promise<CodeforcesStats> {
-  await new Promise((resolve) => setTimeout(resolve, 800));
+  const stats = await fetchCodeforcesProfile(handle);
 
+  // Normalize to the frontend's CodeforcesStats shape
   return {
-    handle,
-    rating: 0,
-    rank: '—',
-    contestsCount: 0
+    handle: stats.handle,
+    rating: stats.rating,
+    rank: stats.rank,
+    contestsCount: stats.contestsCount,
   };
 }
