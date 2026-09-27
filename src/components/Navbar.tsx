@@ -7,6 +7,7 @@
  */
 
 import React from 'react';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/react';
 import { ActiveScreen, UserProfile } from '../types';
 
 interface NavbarProps {
@@ -83,15 +84,31 @@ export const Navbar: React.FC<NavbarProps> = ({ activeScreen, onNavigate, user }
 
           <div className="h-4 w-px bg-slate-200 hidden sm:block"></div>
 
-          {/* Active Authenticated Developer Badge */}
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0F172A] text-xs font-semibold">
-              AD
+          {/* Clerk Auth Controls */}
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button
+                type="button"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-white px-3 py-1.5 rounded-lg bg-[#2563EB] hover:bg-[#1D4ED8] transition-colors shadow-sm"
+              >
+                Sign In
+              </button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <div className="flex items-center gap-2.5">
+              <UserButton
+                appearance={{
+                  elements: {
+                    avatarBox: 'w-7 h-7 rounded-full border border-slate-200',
+                  },
+                }}
+              />
+              <span className="font-mono text-xs font-medium text-[#0F172A] hidden sm:inline">
+                @{user.githubUsername}
+              </span>
             </div>
-            <span className="font-mono text-xs font-medium text-[#0F172A] hidden sm:inline">
-              @{user.githubUsername}
-            </span>
-          </div>
+          </SignedIn>
         </div>
 
       </div>

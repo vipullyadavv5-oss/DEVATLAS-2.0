@@ -10,7 +10,8 @@
  * Centralized state guarantees single-source-of-truth for telemetry data across all views.
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useUser } from '@clerk/react';
 import { ActiveScreen, UserProfile } from './types';
 import { createInitialUserProfile, calculateDevScore } from './utils/devScore';
 import { Navbar } from './components/Navbar';
@@ -23,8 +24,28 @@ import { Settings } from './pages/Settings';
 import { PublicProfile } from './pages/PublicProfile';
 
 export function App() {
+  const { isSignedIn, isLoaded, user: clerkUser } = useUser();
   const [activeScreen, setActiveScreen] = useState<ActiveScreen>('login');
   const [user, setUser] = useState<UserProfile>(createInitialUserProfile());
+
+  // Sync Clerk sign-in state → app screen
+  useEffect(() => {
+    if (!isLoaded) return;
+    if (!isSignedIn) {
+      setActiveScreen('login');
+    } else if (activeScreen === 'login') {
+      // Populate user profile from Clerk identity
+      handleUpdateProfile({
+        githubUsername: clerkUser?.username ||
+          clerkUser?.firstName?.toLowerCase().replace(/\s+/g, '') ||
+          'developer',
+        githubState: 'connected',
+        lastSyncedAt: 'Just now',
+      });
+      setActiveScreen('onboarding');
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoaded, isSignedIn]);
 
   // Update profile helper that recalculates DevScore automatically
   const handleUpdateProfile = (updated: Partial<UserProfile>) => {

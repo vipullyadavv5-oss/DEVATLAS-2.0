@@ -9,23 +9,14 @@
  * No password login or external non-developer providers are permitted.
  */
 
-import React, { useState } from 'react';
+import React from 'react';
+import { SignInButton } from '@clerk/react';
 
 interface LoginProps {
   onLoginSuccess: () => void;
 }
 
-export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleGitHubAuth = () => {
-    setIsLoading(true);
-    // Simulate OAuth handshake with GitHub Gateway
-    setTimeout(() => {
-      setIsLoading(false);
-      onLoginSuccess();
-    }, 1200);
-  };
+export const Login: React.FC<LoginProps> = () => {
 
   return (
     <div className="min-h-screen w-full relative flex flex-col justify-center items-center select-none overflow-hidden m-0 p-4 bg-[#F8FAFC]">
@@ -117,29 +108,19 @@ export const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
 
               {/* Authentication Button Module */}
               <div className="flex flex-col gap-3 pt-1">
-                <button
-                  type="button"
-                  onClick={handleGitHubAuth}
-                  disabled={isLoading}
-                  className="w-full h-12 px-6 rounded-lg bg-[#0F172A] hover:bg-slate-800 text-white font-semibold text-sm flex items-center justify-center gap-3 active:scale-[0.99] transition-all duration-150 relative overflow-hidden shadow-sm cursor-pointer disabled:opacity-80"
-                >
-                  {isLoading ? (
-                    <span className="flex items-center gap-2 font-mono text-xs text-white">
-                      <svg className="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Connecting to GitHub…
-                    </span>
-                  ) : (
+                <SignInButton mode="modal">
+                  <button
+                    type="button"
+                    className="w-full h-12 px-6 rounded-lg bg-[#0F172A] hover:bg-slate-800 text-white font-semibold text-sm flex items-center justify-center gap-3 active:scale-[0.99] transition-all duration-150 relative overflow-hidden shadow-sm cursor-pointer"
+                  >
                     <span className="flex items-center gap-2.5 text-white">
                       <svg className="w-5 h-5 text-white shrink-0 fill-current" viewBox="0 0 24 24">
                         <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
                       </svg>
                       <span>Continue with GitHub</span>
                     </span>
-                  )}
-                </button>
+                  </button>
+                </SignInButton>
 
                 {/* Read-Only Security Guarantee */}
                 <div className="flex items-center gap-2 px-1 py-1">
